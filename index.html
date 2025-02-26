@@ -24,11 +24,14 @@
 
     <form action="javascript:void(0)">
         <div>
-            <label for="txt-id" class="form-label fw-bold">
-                ID:
-            </label>
+            <label for="txt-id" class="form-label fw-bold">ID</label>
             <input required pattern="^C\d{3}$" class="form-control text-center"
                    type="text" name="" id="txt-id" placeholder="Enter ID (Eg: C001)">
+        </div>
+        <div>
+            <label for="txt-name" class="form-label fw-bold">Name</label>
+            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                   id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
         </div>
     </form>
 
