@@ -1,0 +1,24 @@
+{
+  "name": "web-form-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-labs-playground/web-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/code-labs-playground/web-form/issues"
+  },
+  "homepage": "https://github.com/code-labs-playground/web-form#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
+  }
+}
