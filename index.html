@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script defer src="./js/main.js"></script>
+    <style>
+        #frm label::after {
+            content: '*';
+            color: #7e0202;
+        }
+
+        td > .bi-trash {
+            cursor: pointer;
+
+            &:hover {
+                color: red;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="d-flex justify-content-between border-bottom py-2 pt-3 px-2">
@@ -22,16 +36,26 @@
         </div>
     </header>
 
-    <form action="javascript:void(0)" class="px-4 pt-2 text-center">
+    <form action="javascript:void(0)" class="px-4 pt-2 text-center" id="frm">
         <div class="mt-2">
-            <label for="txt-id" class="form-label fw-bold">ID:</label>
+            <label for="txt-id" class="form-label fw-bold">ID: </label>
             <input required pattern="^C\d{3}$" class="form-control text-center"
                    type="text" name="" id="txt-id" placeholder="Enter ID (Eg: C001)">
         </div>
         <div class="mt-2">
-            <label for="txt-name" class="form-label fw-bold">Name:</label>
+            <label for="txt-name" class="form-label fw-bold">Name: </label>
             <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
                    id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
+        </div>
+        <div class="mt-2">
+            <label for="txt-number" class="form-label fw-bold">Mobile: </label>
+            <input required pattern="07\d{1}-\d{7}" class="form-control text-center"
+                   id="txt-number" type="text" name="" placeholder="Enter Mobile No (eg: 077-1234567)">
+        </div>
+        <div class="mt-2">
+            <label for="txt-city" class="form-label fw-bold">City: </label>
+            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                   id="txt-city" type="text" name="" placeholder="Enter City (eg: Galle)">
         </div>
     </form>
 
@@ -41,6 +65,8 @@
             <tr>
                 <th class="text-center">ID</th>
                 <th >NAME</th>
+                <th class="text-center">Mobile</th>
+                <th >City</th>
                 <th class="text-center">DELETE</th>
             </tr>
             </thead>
@@ -48,6 +74,8 @@
             <tr>
                 <td class="text-center">C001</td>
                 <td >Kasun Sampath</td>
+                <td class="text-center">071-1234567</td>
+                <td >Galle</td>
                 <td class="text-center"><i class="bi bi-trash fs-4"></i></td>
             </tr>
             </tbody>
