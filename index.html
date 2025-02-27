@@ -22,74 +22,85 @@
     </style>
 </head>
 <body>
-    <header class="d-flex justify-content-between border-bottom py-2 pt-3 px-2">
-        <h1 class="text-center">
-            Web Form
-        </h1>
-        <div class="fs-4 d-flex gap-2">
-            <i class="bi bi-brightness-high"></i>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="chk-mod" checked>
-                <i class="bi bi-moon"></i>
+    <header class="bg-primary text-white shadow-sm mb-4">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3 mb-0">
+                    <i class="bi bi-card-list me-2"></i>Web Form
+                </h1>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-brightness-high text-white me-2"></i>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="chk-mod" checked>
+                        <i class="bi bi-moon text-white ms-2"></i>
+                    </div>
+                </div>
             </div>
-
         </div>
     </header>
 
-    <form action="javascript:void(0)" class="px-4 pt-2 text-center" id="frm">
-        <div class="mt-2">
-            <label for="txt-id" class="form-label fw-bold">ID: </label>
-            <input required pattern="^C\d{3}$" class="form-control text-center"
-                   type="text" name="" id="txt-id" placeholder="Enter ID (Eg: C001)">
-        </div>
-        <div class="mt-2">
-            <label for="txt-name" class="form-label fw-bold">Name: </label>
-            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
-                   id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
-        </div>
-        <div class="mt-2">
-            <label for="txt-number" class="form-label fw-bold">Mobile: </label>
-            <input required pattern="07\d{1}-\d{7}" class="form-control text-center"
-                   id="txt-number" type="text" name="" placeholder="Enter Mobile No (eg: 077-1234567)">
-        </div>
-        <div class="mt-2">
-            <label for="txt-city" class="form-label fw-bold">City: </label>
-            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
-                   id="txt-city" type="text" name="" placeholder="Enter City (eg: Galle)">
-        </div>
+    <div class="container">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-light">
+                <h5 class="card-title text-center mb-0">Customer Information</h5>
+            </div>
 
-        <div class="mt-2">
-            <button class="btn btn-primary" id="btn-save">Save</button>
-            <button class="btn btn-warning" type="reset" id="btn-clear">Clear</button>
-        </div>
-    </form>
+            <form action="javascript:void(0)" class="px-4 pt-2 text-center" id="frm">
+                <div class="mt-2 d-flex gap-3 align-content-center mw-100">
+                    <label for="txt-id" class="form-label fw-bold">ID: </label>
+                    <input required pattern="^C\d{3}$" class="form-control text-center"
+                           type="text" name="" id="txt-id" placeholder="Enter ID (Eg: C001)">
+                </div>
+                <div class="mt-2">
+                    <label for="txt-name" class="form-label fw-bold">Name: </label>
+                    <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                           id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
+                </div>
+                <div class="mt-2">
+                    <label for="txt-number" class="form-label fw-bold">Mobile: </label>
+                    <input required pattern="07\d{1}-\d{7}" class="form-control text-center"
+                           id="txt-number" type="text" name="" placeholder="Enter Mobile No (eg: 077-1234567)">
+                </div>
+                <div class="mt-2">
+                    <label for="txt-city" class="form-label fw-bold">City: </label>
+                    <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                           id="txt-city" type="text" name="" placeholder="Enter City (eg: Galle)">
+                </div>
 
-    <div class="px-4 pt-4">
-        <table id="tbl-customers" class="table table-hover">
-            <thead>
-            <tr>
-                <th class="text-center">ID</th>
-                <th >NAME</th>
-                <th class="text-center">Mobile</th>
-                <th >City</th>
-                <th class="text-center">DELETE</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="text-center">C001</td>
-                <td >Kasun Sampath</td>
-                <td class="text-center">071-1234567</td>
-                <td >Colombo</td>
-                <td class="text-center"><i class="bi bi-trash fs-4"></i></td>
-            </tr>
-            </tbody>
-            <tfoot class="d-none">
-            <tr>
-                <td colspan="3" class="text-center">No Record Found</td>
-            </tr>
-            </tfoot>
-        </table>
+                <div class="mt-2">
+                    <button class="btn btn-primary" id="btn-save">Save</button>
+                    <button class="btn btn-warning" type="reset" id="btn-clear">Clear</button>
+                </div>
+            </form>
+        </div>
     </div>
+
+<div class="px-4 pt-4">
+    <table id="tbl-customers" class="table table-hover">
+        <thead>
+        <tr>
+            <th class="text-center">ID</th>
+            <th>NAME</th>
+            <th class="text-center">Mobile</th>
+            <th>City</th>
+            <th class="text-center">DELETE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="text-center">C001</td>
+            <td>Kasun Sampath</td>
+            <td class="text-center">071-1234567</td>
+            <td>Colombo</td>
+            <td class="text-center"><i class="bi bi-trash fs-4"></i></td>
+        </tr>
+        </tbody>
+        <tfoot class="d-none">
+        <tr>
+            <td colspan="3" class="text-center">No Record Found</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
 </body>
 </html>
