@@ -45,33 +45,48 @@
                 <h5 class="card-title text-center mb-0">Customer Information</h5>
             </div>
 
-            <form action="javascript:void(0)" class="px-4 pt-2 text-center" id="frm">
-                <div class="mt-2 d-flex gap-3 align-content-center mw-100">
-                    <label for="txt-id" class="form-label fw-bold">ID: </label>
-                    <input required pattern="^C\d{3}$" class="form-control text-center"
-                           type="text" name="" id="txt-id" placeholder="Enter ID (Eg: C001)">
-                </div>
-                <div class="mt-2">
-                    <label for="txt-name" class="form-label fw-bold">Name: </label>
-                    <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
-                           id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
-                </div>
-                <div class="mt-2">
-                    <label for="txt-number" class="form-label fw-bold">Mobile: </label>
-                    <input required pattern="07\d{1}-\d{7}" class="form-control text-center"
-                           id="txt-number" type="text" name="" placeholder="Enter Mobile No (eg: 077-1234567)">
-                </div>
-                <div class="mt-2">
-                    <label for="txt-city" class="form-label fw-bold">City: </label>
-                    <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
-                           id="txt-city" type="text" name="" placeholder="Enter City (eg: Galle)">
-                </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <form action="javascript:void(0)" id="frm">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="txt-id" class="form-label fw-bold">ID</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
+                                    <input required pattern="^C\d{3}$"
+                                           class="form-control"
+                                           type="text"
+                                           id="txt-id"
+                                           placeholder="Enter ID (Eg: C001)">
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="mt-2">
-                    <button class="btn btn-primary" id="btn-save">Save</button>
-                    <button class="btn btn-warning" type="reset" id="btn-clear">Clear</button>
+                        <div class="mt-2">
+                            <label for="txt-name" class="form-label fw-bold">Name: </label>
+                            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                                   id="txt-name" type="text" name="" placeholder="Enter Name (eg: Lahiru Liyanage)">
+                        </div>
+                        <div class="mt-2">
+                            <label for="txt-number" class="form-label fw-bold">Mobile: </label>
+                            <input required pattern="07\d{1}-\d{7}" class="form-control text-center"
+                                   id="txt-number" type="text" name="" placeholder="Enter Mobile No (eg: 077-1234567)">
+                        </div>
+                        <div class="mt-2">
+                            <label for="txt-city" class="form-label fw-bold">City: </label>
+                            <input required pattern="[a-zA-Z\s]+" class="form-control text-center"
+                                   id="txt-city" type="text" name="" placeholder="Enter City (eg: Galle)">
+                        </div>
+
+                        <div class="mt-2">
+                            <button class="btn btn-primary" id="btn-save">Save</button>
+                            <button class="btn btn-warning" type="reset" id="btn-clear">Clear</button>
+                        </div>
+                    </form>
+
+
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 
